@@ -9,6 +9,6 @@ namespace WPFUtils.Controls.Interfaces {
     {
 
 
-        List<string> ProvideCompletions(string text);
+        IList<string> ProvideCompletions(string text);
     }
 }

@@ -15,9 +15,9 @@
         </Grid.RowDefinitions>
         
         <TextBox Width="{Binding ElementName=Window,Path=Width}" x:Name="TxtBox" TextChanged="OnTextChanged" Grid.Row="0"></TextBox>
-        <Popup Width="{Binding ElementName=TxtBox, Path=Width}" x:Name="PopUp" Grid.Row="1" IsOpen="True">
+        <Popup MinWidth="75" Width="{Binding ElementName=TxtBox, Path=Width}" x:Name="PopUp" Grid.Row="1" IsOpen="True">
 
-            <ListBox SelectionMode="Single" x:Name="LstBox" Visibility="Hidden" Width="{Binding ElementName=TxtBox, Path=Width}" SelectionChanged="LstBox_SelectionChanged"></ListBox>
+            <ListBox MinWidth="75" SelectionMode="Single" x:Name="LstBox" Visibility="Hidden" Width="{Binding ElementName=TxtBox, Path=ActualWidth}" SelectionChanged="LstBox_SelectionChanged"></ListBox>
         </Popup>
         
     </Grid>
