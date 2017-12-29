@@ -1,0 +1,11 @@
+E:\Dev\Programs\C#\WPFUtils\WPFUtils\bin\Release\WPFUtils.dll
+E:\Dev\Programs\C#\WPFUtils\WPFUtils\bin\Release\WPFUtils.pdb
+E:\Dev\Programs\C#\WPFUtils\WPFUtils\obj\Release\WPFUtils.csprojResolveAssemblyReference.cache
+E:\Dev\Programs\C#\WPFUtils\WPFUtils\obj\Release\WPFUtils.csproj.CoreCompileInputs.cache
+E:\Dev\Programs\C#\WPFUtils\WPFUtils\obj\Release\WPFUtils.dll
+E:\Dev\Programs\C#\WPFUtils\WPFUtils\obj\Release\WPFUtils.pdb
+G:\Dev\Programs\C#\WPFUtils\WPFUtils\bin\Release\WPFUtils.dll
+G:\Dev\Programs\C#\WPFUtils\WPFUtils\bin\Release\WPFUtils.pdb
+G:\Dev\Programs\C#\WPFUtils\WPFUtils\obj\Release\WPFUtils.csproj.CoreCompileInputs.cache
+G:\Dev\Programs\C#\WPFUtils\WPFUtils\obj\Release\WPFUtils.dll
+G:\Dev\Programs\C#\WPFUtils\WPFUtils\obj\Release\WPFUtils.pdb
