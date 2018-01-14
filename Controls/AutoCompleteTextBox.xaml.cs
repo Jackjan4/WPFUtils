@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -10,10 +11,14 @@ namespace WPFUtils.Controls {
 
 
 
+    /// <inheritdoc>
+    /// 
+    /// </inheritdoc>
+    ///
     /// <summary>
     /// Interaction logic for AutoCompleteTextBox.xaml
     /// </summary>
-    public partial class AutoCompleteTextBox : UserControl {
+    public partial class AutoCompleteTextBox {
 
 
 
@@ -21,11 +26,8 @@ namespace WPFUtils.Controls {
         /// Text Property of TxtBox
         /// </summary>
         public string Text {
-            get => TxtBox.Text;
-            set {
-                TxtBox.Text = value;
-                SetValue(TextProperty, value);
-            }
+            get => (string)GetValue(TextProperty);
+            set => SetValue(TextProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for Text.  This enables animation, styling, binding, etc...
@@ -33,7 +35,18 @@ namespace WPFUtils.Controls {
             DependencyProperty.Register("Text", typeof(string), typeof(AutoCompleteTextBox));
 
 
+        public TextWrapping TextWrapping
+        {
+            get => TxtBox.TextWrapping;
+            set => TxtBox.TextWrapping = value;
+        }
 
+
+        public bool AcceptsReturn
+        {
+            get => TxtBox.AcceptsReturn;
+            set => TxtBox.AcceptsReturn = value;
+        }
 
         /// <summary>
         /// Gets or sets the ReplaceMode
@@ -76,6 +89,7 @@ namespace WPFUtils.Controls {
             if (obj == null) return;
 
             while (!(obj is Window)) {
+                if (obj == null) return;
                 obj = VisualTreeHelper.GetParent(obj);
             }
             ((Window)obj).LocationChanged += ParentWindow_LocationChanged;
@@ -105,7 +119,11 @@ namespace WPFUtils.Controls {
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void OnTextChanged(object sender, TextChangedEventArgs e) {
+        private void OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            if (AutoCompleteProvider == null) return;
+
             var lst = AutoCompleteProvider.ProvideCompletions(TxtBox.Text);
 
             if (lst.Count == 0) {

@@ -9,3 +9,13 @@ G:\Dev\Programs\C#\WPFUtils\WPFUtils\bin\Release\WPFUtils.pdb
 G:\Dev\Programs\C#\WPFUtils\WPFUtils\obj\Release\WPFUtils.csproj.CoreCompileInputs.cache
 G:\Dev\Programs\C#\WPFUtils\WPFUtils\obj\Release\WPFUtils.dll
 G:\Dev\Programs\C#\WPFUtils\WPFUtils\obj\Release\WPFUtils.pdb
+G:\Dev\Programs\C#\WPFUtils\bin\Release\WPFUtils.dll
+G:\Dev\Programs\C#\WPFUtils\bin\Release\WPFUtils.pdb
+G:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils.csprojResolveAssemblyReference.cache
+G:\Dev\Programs\C#\WPFUtils\obj\Release\Controls\AutoCompleteTextBox.baml
+G:\Dev\Programs\C#\WPFUtils\obj\Release\Controls\AutoCompleteTextBox.g.cs
+G:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils_MarkupCompile.cache
+G:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils.g.resources
+G:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils.csproj.CoreCompileInputs.cache
+G:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils.dll
+G:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils.pdb

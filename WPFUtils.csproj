@@ -55,6 +55,8 @@
     <Compile Include="Controls\Interfaces\IAutoCompleteProvider.cs" />
     <Compile Include="Enums\ReplaceMode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XAML\Converter\ObjectExistenceToBooleanConverter.cs" />
+    <Compile Include="XAML\Converter\ColorToStringConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\AutoCompleteTextBox.xaml">
@@ -62,5 +64,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

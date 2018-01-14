@@ -7,14 +7,15 @@
              d:DesignHeight="100" d:DesignWidth="200"
              LostFocus="UserControl_LostFocus"
              Loaded="UserControl_Loaded"
-             x:Name="Window">
+             x:Name="Window"
+             >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-        
-        <TextBox Width="{Binding ElementName=Window,Path=Width}" x:Name="TxtBox" TextChanged="OnTextChanged" Grid.Row="0"></TextBox>
+
+        <TextBox Width="{Binding ElementName=Window,Path=Width}" Height="{Binding ElementName=Window,Path=Height}" x:Name="TxtBox" Text="{Binding Text,ElementName=Window,UpdateSourceTrigger=PropertyChanged}" TextChanged="OnTextChanged" Grid.Row="0"></TextBox>
         <Popup MinWidth="75" Width="{Binding ElementName=TxtBox, Path=Width}" x:Name="PopUp" Grid.Row="1" IsOpen="True">
 
             <ListBox MinWidth="75" SelectionMode="Single" x:Name="LstBox" Visibility="Hidden" Width="{Binding ElementName=TxtBox, Path=ActualWidth}" SelectionChanged="LstBox_SelectionChanged"></ListBox>

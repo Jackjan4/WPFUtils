@@ -4,15 +4,15 @@
 library
 C#
 .cs
-G:\Dev\Programs\C#\WPFUtils\obj\Debug\
+G:\Dev\Programs\C#\WPFUtils\obj\Release\
 WPFUtils
 none
 false
-DEBUG;TRACE
+TRACE
 
 1-142648739
 
-14-1763660177
+8-1200078128
 131254293103
 Controls\AutoCompleteTextBox.xaml;
 
