@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Media;
-using WPFUtils.Controls.Interfaces;
-using WPFUtils.Enums;
+using De.JanRoslan.WPFUtils.Controls.Interfaces;
+using De.JanRoslan.WPFUtils.Enums;
 
-namespace WPFUtils.Controls {
+namespace De.JanRoslan.WPFUtils.Controls {
 
 
 
@@ -19,8 +18,6 @@ namespace WPFUtils.Controls {
     /// Interaction logic for AutoCompleteTextBox.xaml
     /// </summary>
     public partial class AutoCompleteTextBox {
-
-
 
         /// <summary>
         /// Text Property of TxtBox
@@ -35,6 +32,9 @@ namespace WPFUtils.Controls {
             DependencyProperty.Register("Text", typeof(string), typeof(AutoCompleteTextBox));
 
 
+        /// <summary>
+        /// Gets/sets if the text should wrap when theres not horizontal space
+        /// </summary>
         public TextWrapping TextWrapping
         {
             get => TxtBox.TextWrapping;
@@ -42,11 +42,16 @@ namespace WPFUtils.Controls {
         }
 
 
+        /// <summary>
+        /// Get/sets if the TextBox shoudl support line breaks
+        /// </summary>
         public bool AcceptsReturn
         {
             get => TxtBox.AcceptsReturn;
             set => TxtBox.AcceptsReturn = value;
         }
+
+
 
         /// <summary>
         /// Gets or sets the ReplaceMode
@@ -156,10 +161,12 @@ namespace WPFUtils.Controls {
                 case ReplaceMode.Append:
                     TxtBox.Text += str;
                     break;
+
                 default:
                 case ReplaceMode.Replace:
                     TxtBox.Text = str;
                     break;
+
                 case ReplaceMode.LastReplace:
                     string substr;
                     for (int i = str.Length; i > 0; i--) {

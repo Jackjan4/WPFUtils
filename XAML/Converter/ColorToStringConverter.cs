@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace WPFUtils.XAML.Converter {
+namespace De.JanRoslan.WPFUtils.XAML.Converter {
 
     [ValueConversion(typeof(Color),typeof(string))]
     public class ColorToStringConverter : IValueConverter {

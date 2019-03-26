@@ -1,13 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace WPFUtils.Enums {
+namespace De.JanRoslan.WPFUtils.Enums {
 
 
     public enum ReplaceMode {
-        Replace,Append,LastReplace
+
+        // Will replace the existing text
+        Replace,
+
+        // Will append to the existing text
+        Append,
+
+        // Will replace the last occurence of the matching string
+        LastReplace
     }
 }

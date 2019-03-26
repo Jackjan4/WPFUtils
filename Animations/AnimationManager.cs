@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Media;
 
-namespace WPFUtils.Animations {
+namespace De.JanRoslan.WPFUtils.Animations {
 
 
     /// <summary>
