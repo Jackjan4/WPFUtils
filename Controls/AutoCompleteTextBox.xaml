@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="De.JanRoslan.WPFUtils.Controls.AutoCompleteTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="200"
+             LostFocus="UserControl_LostFocus"
+             Loaded="UserControl_Loaded"
+             x:Name="Window"
+             >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBox Width="{Binding ElementName=Window,Path=Width}" Height="{Binding ElementName=Window,Path=Height}" x:Name="TxtBox" Text="{Binding Text,ElementName=Window,UpdateSourceTrigger=PropertyChanged}" TextChanged="OnTextChanged" Grid.Row="0"></TextBox>
+        <Popup MinWidth="75" Width="{Binding ElementName=TxtBox, Path=Width}" x:Name="PopUp" Grid.Row="1" IsOpen="True">
+
+            <ListBox MinWidth="75" SelectionMode="Single" x:Name="LstBox" Visibility="Hidden" Width="{Binding ElementName=TxtBox, Path=ActualWidth}" SelectionChanged="LstBox_SelectionChanged"></ListBox>
+        </Popup>
+        
+    </Grid>
+</UserControl>
