@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <package >
   <metadata>
@@ -15,4 +16,22 @@
     <copyright>Copyright 2019</copyright>
     <tags>C# WPF Utility Utilities VBNET General</tags>
   </metadata>
+=======
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>WPFUtils</id>
+    <version>1.0.0</version>
+    <title>WPFUtils</title>
+    <authors>Jan-Philipp Roslan</authors>
+    <owners>Jan-Philipp Roslan</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/Jackjan4/WPFUtils</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Utility library for WPF Applications</description>
+    <releaseNotes>Init Package</releaseNotes>
+    <copyright>Copyright 2019 - Jan-Philipp Roslan</copyright>
+    <tags>C# WPF Utility</tags>
+  </metadata>
+>>>>>>> master
 </package>
