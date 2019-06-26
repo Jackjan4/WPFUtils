@@ -5,7 +5,7 @@ using System.Windows.Media;
 
 namespace De.JanRoslan.WPFUtils.XAML.Converter {
 
-    [ValueConversion(typeof(Color),typeof(string))]
+    [ValueConversion(typeof(Color), typeof(string))]
     public class ColorToStringConverter : IValueConverter {
 
 
@@ -19,12 +19,11 @@ namespace De.JanRoslan.WPFUtils.XAML.Converter {
         /// <param name="culture"></param>
         /// <returns></returns>
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
-            switch (value)
-            {
+            switch (value) {
                 case string _:
-                    return ConvertBack(value, typeof(Color), null, null);
+                return ConvertBack(value, typeof(Color), null, null);
                 case null:
-                    return "#00FFFFFF";
+                return "#00FFFFFF";
             }
 
             return ((Color) value).ToString();
@@ -40,15 +39,18 @@ namespace De.JanRoslan.WPFUtils.XAML.Converter {
         /// <param name="culture"></param>
         /// <returns></returns>
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) {
-            switch (value)
-            {
+            switch (value) {
                 case Color _:
-                    return Convert(value, typeof(string), null, null);
+                return Convert(value, typeof(string), null, null);
                 case null:
-                    return null;
+                return null;
             }
 
-            return ColorConverter.ConvertFromString((string)value);
+            string val = (string) value;
+
+            // Empty color string will return transparent black, (interpretation: It consists of no color information, so: 0, 0, 0, 0)
+            // If we would return null, the converter would not be compatible with XAML
+            return val == "" ? Color.FromArgb(0, 0, 0, 0) : ColorConverter.ConvertFromString((string) value);
         }
     }
 }
