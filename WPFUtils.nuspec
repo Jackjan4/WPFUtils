@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>WPFUtils</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <title>WPFUtils</title>
     <authors>Jan-Philipp Roslan</authors>
     <owners>Jan-Philipp Roslan</owners>
@@ -11,7 +11,7 @@
     <!-- <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Utility library for .NET WPF </description>
-    <releaseNotes>Optimizing RelayCommand</releaseNotes>
+    <releaseNotes>Added InverseBooleanConverter</releaseNotes>
     <tags>C# WPF Utility Utilities VBNET General</tags>
   </metadata>
 </package>
