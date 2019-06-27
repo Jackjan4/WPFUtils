@@ -1,22 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace De.JanRoslan.WPFUtils {
+
+
+    /// <summary>
+    /// A RelayCommand that can be used for delegating GUI commands to the ViewModel.
+    /// (If Prism is used, its 'DelegateCommand' should be favored instead of this one. )
+    /// </summary>
     public class RelayCommand : ICommand {
 
 
         public event EventHandler CanExecuteChanged {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
+            add => CommandManager.RequerySuggested += value;
+            remove => CommandManager.RequerySuggested -= value;
         }
 
-        private Action<object> methodToExecute;
+        private readonly Action<object> _methodToExecute;
 
-        private Func<bool> canExecuteEvaluator;
+        private readonly Func<bool> _canExecuteEvaluator;
 
 
 
@@ -26,8 +28,8 @@ namespace De.JanRoslan.WPFUtils {
         /// <param name="methodToExecute"></param>
         /// <param name="canExecuteEvaluator"></param>
         public RelayCommand(Action<object> methodToExecute, Func<bool> canExecuteEvaluator) {
-            this.methodToExecute = methodToExecute;
-            this.canExecuteEvaluator = canExecuteEvaluator;
+            _methodToExecute = methodToExecute;
+            _canExecuteEvaluator = canExecuteEvaluator;
         }
 
 
@@ -48,12 +50,12 @@ namespace De.JanRoslan.WPFUtils {
         /// <param name="parameter"></param>
         /// <returns></returns>
         public bool CanExecute(object parameter) {
-            if (this.canExecuteEvaluator == null) {
+            if (_canExecuteEvaluator == null) {
                 return true;
-            } else {
-                bool result = this.canExecuteEvaluator.Invoke();
-                return result;
             }
+
+            bool result = _canExecuteEvaluator.Invoke();
+            return result;
         }
 
 
@@ -63,7 +65,7 @@ namespace De.JanRoslan.WPFUtils {
         /// </summary>
         /// <param name="parameter"></param>
         public void Execute(object parameter) {
-            this.methodToExecute.Invoke(parameter);
+            _methodToExecute.Invoke(parameter);
         }
     }
 }

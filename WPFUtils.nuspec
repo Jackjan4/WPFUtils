@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 <?xml version="1.0"?>
 <package >
   <metadata>
     <id>WPFUtils</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>WPFUtils</title>
     <authors>Jan-Philipp Roslan</authors>
     <owners>Jan-Philipp Roslan</owners>
@@ -12,26 +11,7 @@
     <!-- <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Utility library for .NET WPF </description>
-    <releaseNotes>Fixed </releaseNotes>
-    <copyright>Copyright 2019</copyright>
+    <releaseNotes>Optimizing RelayCommand</releaseNotes>
     <tags>C# WPF Utility Utilities VBNET General</tags>
   </metadata>
-=======
-<?xml version="1.0"?>
-<package >
-  <metadata>
-    <id>WPFUtils</id>
-    <version>1.0.0</version>
-    <title>WPFUtils</title>
-    <authors>Jan-Philipp Roslan</authors>
-    <owners>Jan-Philipp Roslan</owners>
-    <license type="expression">MIT</license>
-    <projectUrl>https://github.com/Jackjan4/WPFUtils</projectUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Utility library for WPF Applications</description>
-    <releaseNotes>Init Package</releaseNotes>
-    <copyright>Copyright 2019 - Jan-Philipp Roslan</copyright>
-    <tags>C# WPF Utility</tags>
-  </metadata>
->>>>>>> master
 </package>
