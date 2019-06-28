@@ -4,7 +4,12 @@ using System.Windows.Data;
 
 namespace De.JanRoslan.WPFUtils.XAML.Converter {
 
-    [ValueConversion(typeof(bool), (typeof(int)))]
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [ValueConversion(typeof(bool), (typeof(bool)))]
     public class InverseBooleanConverter : IValueConverter {
 
 
@@ -19,7 +24,9 @@ namespace De.JanRoslan.WPFUtils.XAML.Converter {
         /// <returns></returns>
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
             if (value is bool b) {
-                return !b;
+                bool result = !b;
+
+                return result;
             }
 
             return false;
