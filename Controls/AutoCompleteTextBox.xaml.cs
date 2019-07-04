@@ -43,7 +43,7 @@ namespace De.JanRoslan.WPFUtils.Controls {
 
 
         /// <summary>
-        /// Get/sets if the TextBox shoudl support line breaks
+        /// Get/sets if the TextBox should support line breaks
         /// </summary>
         public bool AcceptsReturn
         {
