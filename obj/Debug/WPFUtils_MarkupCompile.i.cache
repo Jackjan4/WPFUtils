@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-2-1117616618
+21690172116
 
-17448305937
-151984215308
-Controls\AutoCompleteTextBox.xaml;Controls\ListSelection.xaml;
+17364928480
+131569487696
+Controls\AutoCompleteTextBox.xaml;Controls\DualListSelection.xaml;
 
-True
+False
 

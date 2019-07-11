@@ -54,8 +54,8 @@
       <DependentUpon>AutoCompleteTextBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Interfaces\IAutoCompleteProvider.cs" />
-    <Compile Include="Controls\ListSelection.xaml.cs">
-      <DependentUpon>ListSelection.xaml</DependentUpon>
+    <Compile Include="Controls\DualListSelection.xaml.cs">
+      <DependentUpon>DualListSelection.xaml</DependentUpon>
     </Compile>
     <Compile Include="Enums\ReplaceMode.cs" />
     <Compile Include="Properties\Annotations.cs" />
@@ -72,7 +72,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\ListSelection.xaml">
+    <Page Include="Controls\DualListSelection.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

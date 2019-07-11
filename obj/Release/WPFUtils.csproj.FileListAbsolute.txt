@@ -19,3 +19,15 @@ G:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils.g.resources
 G:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils.csproj.CoreCompileInputs.cache
 G:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils.dll
 G:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils.pdb
+F:\Dev\Programs\C#\WPFUtils\bin\Release\WPFUtils.dll
+F:\Dev\Programs\C#\WPFUtils\bin\Release\WPFUtils.pdb
+F:\Dev\Programs\C#\WPFUtils\obj\Release\Controls\AutoCompleteTextBox.baml
+F:\Dev\Programs\C#\WPFUtils\obj\Release\Controls\AutoCompleteTextBox.g.cs
+F:\Dev\Programs\C#\WPFUtils\obj\Release\Controls\DualListSelection.g.cs
+F:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils_MarkupCompile.cache
+F:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils_MarkupCompile.lref
+F:\Dev\Programs\C#\WPFUtils\obj\Release\Controls\DualListSelection.baml
+F:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils.g.resources
+F:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils.csproj.CoreCompileInputs.cache
+F:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils.dll
+F:\Dev\Programs\C#\WPFUtils\obj\Release\WPFUtils.pdb

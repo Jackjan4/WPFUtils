@@ -1,38 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using De.JanRoslan.WPFUtils.Annotations;
+
 
 namespace De.JanRoslan.WPFUtils.Controls {
+
+
+
     /// <summary>
     /// Interaction logic for ListSelection.xaml
     /// </summary>
-    public partial class ListSelection : UserControl, INotifyPropertyChanged {
+    public partial class DualListSelection : UserControl, INotifyPropertyChanged {
+
+
 
         // Events
         public event PropertyChangedEventHandler PropertyChanged;
-
         public event RoutedEventHandler LeftClick;
         public event RoutedEventHandler RightClick;
         public event RoutedEventHandler LeftAllClick;
         public event RoutedEventHandler RightAllClick;
 
 
-        // Properties
+
+        /// Properties
+        // Source Text
         private string _sourceText;
         public string SourceText {
             get => _sourceText;
@@ -42,8 +35,8 @@ namespace De.JanRoslan.WPFUtils.Controls {
             }
         }
 
+        // Target Text
         private string _targetText;
-
         public string TargetText {
             get => _targetText;
             set {
@@ -60,10 +53,9 @@ namespace De.JanRoslan.WPFUtils.Controls {
             get => (ObservableCollection<object>) GetValue(SourceItemsProperty);
             set => SetValue(SourceItemsProperty, value);
         }
-
         // Using a DependencyProperty as the backing store for Text.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty SourceItemsProperty =
-            DependencyProperty.Register("SourceItems", typeof(ObservableCollection<object>), typeof(ListSelection), new PropertyMetadata(null, OnSourceItemsChanged));
+            DependencyProperty.Register("SourceItems", typeof(ObservableCollection<object>), typeof(DualListSelection), new PropertyMetadata(null, OnSourceItemsChanged));
 
 
         /// <summary>
@@ -73,10 +65,9 @@ namespace De.JanRoslan.WPFUtils.Controls {
             get => (ObservableCollection<object>) GetValue(TargetItemsProperty);
             set => SetValue(TargetItemsProperty, value);
         }
-
         // Using a DependencyProperty as the backing store for Text.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TargetItemsProperty =
-            DependencyProperty.Register("TargetItems", typeof(ObservableCollection<object>), typeof(ListSelection), new PropertyMetadata(null, OnTargetItemsChanged));
+            DependencyProperty.Register("TargetItems", typeof(ObservableCollection<object>), typeof(DualListSelection), new PropertyMetadata(null, OnTargetItemsChanged));
 
 
 
@@ -87,10 +78,9 @@ namespace De.JanRoslan.WPFUtils.Controls {
             get => (object) GetValue(LeftSelectedItemProperty);
             set => SetValue(LeftSelectedItemProperty, value);
         }
-
         // Using a DependencyProperty as the backing store for Text.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty LeftSelectedItemProperty =
-            DependencyProperty.Register("LeftSelectedItem", typeof(object), typeof(ListSelection), new PropertyMetadata(null, OnLeftSelectedItemChanged));
+            DependencyProperty.Register("LeftSelectedItem", typeof(object), typeof(DualListSelection), new PropertyMetadata(null, OnLeftSelectedItemChanged));
 
 
 
@@ -102,10 +92,9 @@ namespace De.JanRoslan.WPFUtils.Controls {
             get => (object) GetValue(RightSelectedItemProperty);
             set => SetValue(RightSelectedItemProperty, value);
         }
-
         // Using a DependencyProperty as the backing store for Text.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty RightSelectedItemProperty =
-            DependencyProperty.Register("RightSelectedItem", typeof(object), typeof(ListSelection), new PropertyMetadata(null, OnRightSelectedItemChanged));
+            DependencyProperty.Register("RightSelectedItem", typeof(object), typeof(DualListSelection), new PropertyMetadata(null, OnRightSelectedItemChanged));
 
 
 
@@ -113,7 +102,7 @@ namespace De.JanRoslan.WPFUtils.Controls {
         /// <summary>
         /// Constructor
         /// </summary>
-        public ListSelection() {
+        public DualListSelection() {
             InitializeComponent();
         }
 
@@ -223,7 +212,7 @@ namespace De.JanRoslan.WPFUtils.Controls {
         ///
         /// 
         private static void OnSourceItemsChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
-            ListSelection origin = (ListSelection) d;
+            DualListSelection origin = (DualListSelection) d;
 
             origin.OnSourceItemsChanged();
         }
@@ -236,7 +225,7 @@ namespace De.JanRoslan.WPFUtils.Controls {
         /// <param name="d"></param>
         /// <param name="e"></param>
         private static void OnTargetItemsChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
-            ListSelection origin = (ListSelection) d;
+            DualListSelection origin = (DualListSelection) d;
 
             origin.OnTargetItemsChanged();
         }
@@ -249,7 +238,7 @@ namespace De.JanRoslan.WPFUtils.Controls {
         /// <param name="d"></param>
         /// <param name="e"></param>
         private static void OnRightSelectedItemChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
-            ListSelection origin = (ListSelection) d;
+            DualListSelection origin = (DualListSelection) d;
 
             origin.OnRightSelectedItemChanged();
         }
@@ -264,7 +253,7 @@ namespace De.JanRoslan.WPFUtils.Controls {
         /// <param name="d"></param>
         /// <param name="e"></param>
         private static void OnLeftSelectedItemChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
-            ListSelection origin = (ListSelection) d;
+            DualListSelection origin = (DualListSelection) d;
 
             origin.OnLeftSelectedItemChanged();
         }
