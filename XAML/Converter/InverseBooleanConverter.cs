@@ -7,7 +7,7 @@ namespace De.JanRoslan.WPFUtils.XAML.Converter {
 
 
     /// <summary>
-    /// 
+    /// Converts a Boolean to its inverse representation
     /// </summary>
     [ValueConversion(typeof(bool), (typeof(bool)))]
     public class InverseBooleanConverter : IValueConverter {
@@ -15,7 +15,7 @@ namespace De.JanRoslan.WPFUtils.XAML.Converter {
 
 
         /// <summary>
-        /// Boolean to inverse boolean
+        /// Convert Boolean to inverse boolean
         /// </summary>
         /// <param name="value"></param>
         /// <param name="targetType"></param>
@@ -24,18 +24,16 @@ namespace De.JanRoslan.WPFUtils.XAML.Converter {
         /// <returns></returns>
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
             if (value is bool b) {
-                bool result = !b;
-
-                return result;
+                return !b;
             }
 
-            return false;
+            throw new ConversionException("Conversion could not be executed since the given value is of wrong type.");
         }
 
 
 
         /// <summary>
-        /// Boolean to inverse boolean
+        /// Convert Boolean to inverse boolean
         /// </summary>
         /// <param name="value"></param>
         /// <param name="targetType"></param>
@@ -47,7 +45,7 @@ namespace De.JanRoslan.WPFUtils.XAML.Converter {
                 return !b;
             }
 
-            return false;
+            throw new ConversionException("Conversion could not be executed since the given value is of wrong type.");
         }
     }
 }
