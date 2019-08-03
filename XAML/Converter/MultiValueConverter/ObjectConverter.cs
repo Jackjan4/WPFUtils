@@ -8,6 +8,7 @@ namespace De.JanRoslan.WPFUtils.XAML.Converter.MultiValueConverter {
     /// <summary>
     /// 
     /// </summary>
+    [ValueConversion(typeof(object[]),typeof(object))]
     public class ObjectConverter : IMultiValueConverter {
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
