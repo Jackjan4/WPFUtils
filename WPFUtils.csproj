@@ -6,6 +6,13 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWPF>true</UseWPF>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageTags>utilities wpf utils</PackageTags>
+    <PackageProjectUrl>https://github.com/Jackjan4/WPFUtils</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Jackjan4/WPFUtils</RepositoryUrl>
+    <PackageReleaseNotes>Updated Project to .NET 5</PackageReleaseNotes>
+    <Authors>Jackjan4</Authors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DefineConstants>

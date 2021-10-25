@@ -2,16 +2,16 @@
 <package >
   <metadata>
     <id>WPFUtils</id>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <title>WPFUtils</title>
-    <authors>Jan-Philipp Roslan</authors>
-    <owners>Jan-Philipp Roslan</owners>
+    <authors>Jackjan4</authors>
+    <owners>Jackjan4</owners>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/Jackjan4/WPFUtils</projectUrl>
     <!-- <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Utility library for .NET WPF </description>
-    <releaseNotes>Added DualListSelection</releaseNotes>
+    <releaseNotes>Updated to .NET 5</releaseNotes>
     <tags>C# WPF Utility Utilities VBNET General</tags>
   </metadata>
 </package>
